@@ -31,13 +31,13 @@ def est_contrast_vifs(desmat, contrasts):
         )
         true_var_contrast = (
             contrast_cvec
-            @ np.linalg.pinv(desmat_copy.transpose() @ desmat_copy)
+            @ np.linalg.inv(desmat_copy.transpose() @ desmat_copy)
             @ contrast_cvec.transpose()
         )
         # The folllowing is the "best case" scenario because the between condition regressor correlations are set to 0
         best_var_contrast = (
             contrast_cvec
-            @ np.linalg.pinv(
+            @ np.linalg.inv(
                 np.multiply(
                     desmat_copy.transpose() @ desmat_copy,
                     np.identity(desmat_copy.shape[1]),
