@@ -10,6 +10,8 @@ where $\circ$ represents elementwise matrix multiplication and $I_N$ is a $N\tim
 The estimates will only be accurate if each regressor represents a single stimulus and no orthogonalization has been done. Parametric regressors are fine if they represent a continuous measure (e.g., trial difficulty). However, a parametrically modulated regressor coded as Stimulus A - Stimulus B will miscalculate the VIF and should be recoded with separate Stimulus A and Stimulus B regressors.
 
 
+
+
 # Example use
 To add a copy icon to the code block, you can use HTML within your markdown. Here's how you can do it:
 
